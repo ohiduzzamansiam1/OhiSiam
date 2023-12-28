@@ -1,7 +1,7 @@
 import ProjectCard from "../components/ProjectCard";
 import { getProjects } from "../lib/apollo";
 
-export const revalidate = 30;
+export const revalidate = 5;
 
 async function Project() {
   const { projects } = await getProjects();

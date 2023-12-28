@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { getHomePage } from "./lib/apollo";
 
-export const revalidate = 30;
+export const revalidate = 5;
 
 async function Home() {
   const { homePages } = await getHomePage();

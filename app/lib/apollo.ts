@@ -64,6 +64,7 @@ const getHomePageQuery = gql`
 export async function getProjects() {
   const { data }: { data: ProjectType } = await client.query({
     query: getProjectsQuery,
+    fetchPolicy: "no-cache",
   });
   return data;
 }
@@ -71,6 +72,7 @@ export async function getProjects() {
 export async function getHomePage() {
   const { data }: { data: HomePageType } = await client.query({
     query: getHomePageQuery,
+    fetchPolicy: "no-cache",
   });
   return data;
 }
