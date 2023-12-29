@@ -27,7 +27,7 @@ export default function NotFound() {
           <Link href="/" className="text-blue-500">
             Back
           </Link>{" "}
-          kor shala😤 .
+          to home page.
         </p>
       </div>
     </div>
