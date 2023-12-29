@@ -1,3 +1,4 @@
+import GoogleAnalytics from "@bradgarropy/next-google-analytics";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GeistSans } from "geist/font/sans";
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={`${GeistSans.className}`}>
         <div className="container md:max-w-3xl lg:max-w-5xl">
           <Navbar />
+          <GoogleAnalytics measurementId="G-6SQWXS7D1V" />
           {children}
           <Analytics />
           <SpeedInsights />
