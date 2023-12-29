@@ -1,9 +1,7 @@
+import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "OhiSiam - Portfolio",
@@ -17,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${GeistSans.className}`}>
         <div className="container md:max-w-3xl lg:max-w-5xl">
           <Navbar />
           {children}

@@ -18,8 +18,8 @@ const pageLinks = [
     href: "/projects",
   },
   {
-    name: "GuestBook",
-    href: "/guestbook",
+    name: "Chats",
+    href: "/chats",
   },
 ];
 

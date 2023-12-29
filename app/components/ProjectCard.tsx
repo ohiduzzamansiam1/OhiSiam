@@ -18,16 +18,15 @@ function ProjectCard({ image, description, name, slug }: ProjectCardProps) {
         width={1000}
         height={1000}
         priority
-        className="w-full shadow-sm max-h-[13rem] object-cover"
+        className="w-full shadow-sm 
+        min-h-[13rem] max-h-[13rem] object-cover rounded-t-lg"
         quality={100}
       />
       <div className="p-5">
-        <h5 className="mb-2 text-2xl line-clamp-1 font-bold tracking-tight text-gray-900 dark:text-white">
+        <h5 className="mb-2 text-2xl line-clamp-1 font-bold tracking-tight text-gra">
           {name}
         </h5>
-        <p className="mb-3 font-normal line-clamp-3 text-gray-700 dark:text-gray-400">
-          {description}
-        </p>
+        <p className="mb-3 font-normal line-clamp-3 text-gra">{description}</p>
         <Link
           href={`projects/${slug}/`}
           className="text-primary flex items-center text-sm rounded-lg w-fit font-medium"
