@@ -4,7 +4,7 @@ interface Project {
   __typename: string;
   id: string;
   name: string;
-  description: string;
+  description: { html: string };
   slug: string;
   url: string;
   coverImage: { url: string };
@@ -28,7 +28,7 @@ interface HomePageType {
 interface SingleProjectType {
   project: {
     name: string;
-    description: string;
+    description: { html: string };
     url: string;
     coverImage: {
       url: string;
@@ -47,7 +47,9 @@ const getProjectsQuery = gql`
     projects {
       id
       name
-      description
+      description {
+        html
+      }
       slug
       url
       coverImage {
@@ -94,7 +96,9 @@ export async function getProjectBySlug(slug: string) {
       query MyQuery {
         project(where: { slug: "${slug}" }) {
           name
-          description
+          description {
+            html
+          }
           url
           coverImage {
             url
