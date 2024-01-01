@@ -23,6 +23,7 @@
     "html-react-parser": "^5.0.11",
     "lucide-react": "^0.302.0",
     "next": "14.0.4",
+    "random-string-generator": "^1.0.1",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.2.0",

@@ -69,3 +69,8 @@
   text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
 }
+
+p > a {
+  color: #5a5cec;
+  text-decoration: underline;
+}

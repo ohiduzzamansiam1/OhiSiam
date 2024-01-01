@@ -1,5 +1,17 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
+function generateRandomString() {
+  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+  let result = "";
+
+  for (let i = 0; i < 5; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    result += characters.charAt(randomIndex);
+  }
+
+  return result;
+}
+
 interface Project {
   __typename: string;
   id: string;
@@ -42,8 +54,23 @@ export const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+const getHomePageQuery = gql`
+  query ${generateRandomString()} {
+    homePages {
+      id
+      name
+      aboutMe {
+        html
+      }
+      profilePic {
+        url
+      }
+    }
+  }
+`;
+
 const getProjectsQuery = gql`
-  query MyQuery {
+  query ${generateRandomString()} {
     projects {
       id
       name
@@ -53,21 +80,6 @@ const getProjectsQuery = gql`
       slug
       url
       coverImage {
-        url
-      }
-    }
-  }
-`;
-
-const getHomePageQuery = gql`
-  query MyQuery {
-    homePages {
-      id
-      name
-      aboutMe {
-        html
-      }
-      profilePic {
         url
       }
     }
@@ -91,9 +103,10 @@ export async function getHomePage() {
 }
 
 export async function getProjectBySlug(slug: string) {
+  console.log(slug);
   const { data }: { data: SingleProjectType } = await client.query({
     query: gql`
-      query MyQuery {
+      query ${generateRandomString()} {
         project(where: { slug: "${slug}" }) {
           name
           description {
