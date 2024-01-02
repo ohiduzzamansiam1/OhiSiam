@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${GeistSans.className}`}>
-        <div className="container md:max-w-3xl lg:max-w-5xl">
+        <div className="container">
           <Navbar />
           <GoogleAnalytics measurementId="G-6SQWXS7D1V" />
           {children}

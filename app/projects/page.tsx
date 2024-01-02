@@ -7,7 +7,7 @@ async function Project() {
   const { projects } = await getProjects();
   return (
     <>
-      <div className="py-4">
+      <div className="py-4 flex flex-col items-center">
         <h1 className="text-3xl border-b pb-4 font-extrabold w-fit mb-8 text-start">
           My Projects
         </h1>

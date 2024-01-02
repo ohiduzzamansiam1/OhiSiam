@@ -71,7 +71,7 @@ const getHomePageQuery = gql`
 
 const getProjectsQuery = gql`
   query ${generateRandomString()} {
-    projects {
+    projects(orderBy: createdAt_DESC) {
       id
       name
       description {

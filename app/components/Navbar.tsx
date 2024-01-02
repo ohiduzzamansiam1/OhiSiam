@@ -18,8 +18,8 @@ const pageLinks = [
     href: "/projects",
   },
   {
-    name: "Chats",
-    href: "/chats",
+    name: "Comments",
+    href: "/comments",
   },
 ];
 
@@ -66,7 +66,7 @@ function Navbar() {
             </Button>
           </SheetTrigger>
           <SheetContent className="flex flex-col justify-center items-center">
-            <div className="z-10 flex flex-col items-center text-xl font-bold gap-2">
+            <div className="z-10 flex flex-col items-center text-lg font-semibold gap-2">
               {pageLinks.map((link, idx) => (
                 <Link
                   key={idx}
@@ -81,7 +81,7 @@ function Navbar() {
               ))}
             </div>
             <div className="h-full w-full select-none absolute flex items-end justify-center pb-3">
-              <p className="border-t pt-3 font-semibold">
+              <p className="border-t pt-3 font-medium text-sm">
                 Built with 💝 by <span className="text-primary">Siam.</span>
               </p>
             </div>

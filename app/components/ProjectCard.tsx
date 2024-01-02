@@ -12,15 +12,14 @@ interface ProjectCardProps {
 
 function ProjectCard({ image, description, name, slug }: ProjectCardProps) {
   return (
-    <div className="bg-white border-gray-200 rounded-lg shadow-xl">
+    <div className="bg-white border-gray-200 rounded-xl shadow-xl">
       <Image
         src={image}
         alt={name}
         width={1000}
         height={1000}
         priority
-        className="w-full shadow-sm 
-        min-h-[13rem] max-h-[13rem] object-cover rounded-t-lg"
+        className="w-full max-h-[15rem] rounded-t-lg shadow-sm"
         quality={100}
       />
       <div className="p-5">
